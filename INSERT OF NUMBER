@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    int arr[100],n,pos,value;
+    printf("ENTER YOUR SIZE OF ARRAY: ");
+    scanf("%d",&n);
+    
+    printf("ENTER YOUR ELEMENT: ");
+    for(int i = 0; i<n; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("ENTER YOUR POSTION(1 to %d): ",n+1);
+    scanf("%d",&pos);
+    
+    printf("ENTER YOUR INSTER NUMBER : ");
+    scanf("%d",&value);
+    for(int i =n; i>=pos; i-- ){
+        arr[i] = arr[i-1];
+        }
+    arr[pos -1] = value;
+    n++;
+    printf("ARRAY after insetation :\n");
+    for(int i = 0; i<n; i++)
+    {
+        printf("%d",arr[i]);
+    }
+    
+}
