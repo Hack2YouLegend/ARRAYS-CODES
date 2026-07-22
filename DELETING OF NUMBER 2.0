@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+	int arr[200],a,pos;
+	printf("ENTER YOUR SIZE OF ELEMENT : ");
+	scanf("%d",&a);
+	for(int i = 0; i<a; i++)
+    {
+    	printf("ENTER YOUR %d ELEMENT : ",i+1);
+    	scanf("%d",&arr[i]);
+	}
+	printf("ENTER YOUR POSITION (1 to %d) : ",a);
+	scanf("%d",&pos);
+	for(int i = pos-1; i<= a-1; i++)
+	{
+		arr[i] = arr[i+1];
+	}
+	a--;
+	printf("AFTER INZILATION\n");
+	for(int i =0; i<a; i++)
+    {
+    	printf("%d\n",arr[i]);
+	}
+}
