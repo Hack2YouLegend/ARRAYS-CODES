@@ -7,7 +7,7 @@ int main() {
     scanf("%d",&a);
     for(int i = 0; i<a; i++)
     {
-        printf("ENTER YOUR %d ELEMENT : ",i+1);
+       printf("ENTER YOUR %d ELEMENT : ",i+1);
         scanf("%d",&arr[i]);
     }
     printf("YOUR ARRAY IS: ");
@@ -15,7 +15,7 @@ int main() {
     {
     printf("%d ", arr[i]);
     }
-printf("\n");
+          printf("\n");
     printf("ENTER YOUR POSITION (1 to %d) : ",a+1);
     scanf("%d",&pos);
     printf("ENTER YOUR VALUE : ");
@@ -24,10 +24,10 @@ printf("\n");
     {
         arr[i] = arr[i-1];
     }
-    arr[pos] = val;
+    arr[pos-1] = val;
 
     printf("AFTER THE INSERTION\n");
-    for(int i=0; i<a; i++)
+    for(int i=0; i<a+1; i++)
     {
         printf("%d\n",arr[i]);
     }
@@ -39,10 +39,10 @@ printf("\n");
     arr[i] = arr[i+1];
 }
     printf("AFTER THE INZIZLATION\n");
-    for(int i = 0; i<a-1; i++)
+    for(int i = 0; i<a; i++)
     {
         printf("%d\n",arr[i]);
     }
-    
+
     return 0;
 }
